@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 
     <Button
@@ -38,4 +38,11 @@
         android:layout_height="64dp"
         android:layout_marginTop="280dp"
         android:text="SHARE" />
+
+    <Button
+        android:id="@+id/btnRecyclerViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="340dp"
+        android:text="Recycler View Demo" />
 </RelativeLayout>

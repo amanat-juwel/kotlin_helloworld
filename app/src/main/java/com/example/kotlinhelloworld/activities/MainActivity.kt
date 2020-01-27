@@ -1,10 +1,12 @@
-package com.example.kotlinhelloworld
+package com.example.kotlinhelloworld.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.kotlinhelloworld.R
+import com.example.kotlinhelloworld.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +17,11 @@ class MainActivity : AppCompatActivity() {
 
         showToastBtn.setOnClickListener {
             Log.i("MainActivity", "Hello from the world of Kotlin!")
+
+            //ol format
             Toast.makeText(this, "Button was clicked!", Toast.LENGTH_SHORT).show()
+            //kotlin extension (by default LENGTH_SHORT)
+            showToast("Button was clicked!", Toast.LENGTH_LONG)
         }
 
         //Share Data between Activities using Explicit Intent
@@ -44,5 +50,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(intent, "Share To: "))
             //end sharing data to another android app
         }
+
+        //Recycler view demo
+        btnRecyclerViewDemo.setOnClickListener {
+            val intent = Intent(this, HobbiesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
+
